@@ -39,7 +39,8 @@ source [VENV name]\bin\activate
 pip install django==1.6.2
 pip install pymongo==2.8
 pip install mongoengine==0.9.0
-pip install django-mongonaut12345678910111213
+pip install django-mongonaut
+12345678910111213
 ```
 
 #### **3.创建django项目**

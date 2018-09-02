@@ -53,7 +53,7 @@ grade = student.stu    # relationship 中的 backref=stu
 
 #### 安装migrate
 
-```
+```python
 pip install flask-migrate
 ```
 
@@ -61,7 +61,7 @@ pip install flask-migrate
 
 初始化，使用app和db进行migrate对象的初始化
 
-```
+```python
 from flask_migrate import Migrate
 
 #绑定app和数据库
@@ -70,7 +70,7 @@ Migrate(app=app, db=db)
 
 ##### 2.2.2 安装了flask-script的话，可以在Manager()对象上添加迁移指令
 
-```
+```python
 from flask_migrate import Migrate, MigrateCommand
 
 app = Flask(__name__)
@@ -82,7 +82,7 @@ manage.add_command('db', MigrateCommand)
 
 操作：
 
-```
+```python
 python manage.py db init  初始化出migrations的文件，只调用一次
 
 python manage.py db migrate  生成迁移文件

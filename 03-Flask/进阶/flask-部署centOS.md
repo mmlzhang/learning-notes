@@ -78,7 +78,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 
-```
+```shell
  [uwsgi]
   2 projectname = axf
   3 base = /home/src

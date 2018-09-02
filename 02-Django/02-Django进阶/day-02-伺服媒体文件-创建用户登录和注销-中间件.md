@@ -139,7 +139,7 @@ urlpatterns = [
 
 - 将user的登录这些行为放在一个app中
 - 创建模型  
-  - User.objects.create() 创建不用save(),   
+  - User.objects.create() 创建不用save()
   - User(username=username) 要save(), 才能保存在数据库中
 - ==models==
 
@@ -240,10 +240,10 @@ views --> templates
 
 定义中间件
 
-- 创建目录 utils - >新建 UserMiddleware.py   新建  \__init__.py  将其设置为项目内置的包
+- 创建目录 utils ->新建 UserMiddleware.py   新建  \__init__.py  将其设置为项目内置的包
 - settings.py 加载中间键 ==MIDDLEWARE==,
 - 设置未登录时的跳转地址==LOGIN_URL = '/user/login/'==
-- ``'utils.UserAuthMiddleware.UserAuthMiddle',``
+- `utils.UserAuthMiddleware.UserAuthMiddle`
 - 会出现重定向次数过多的情况, 是因为中间件验证的登录页面也没有cookie, 所以一直在login页面重定向, 应该就在中间件中设置一下取消的重定向的路径, 在==request.path==中设置忽略的路径
 
 ```python
@@ -281,8 +281,8 @@ class UserAuthMiddle(MiddlewareMixin):
 
 `redirect()`
 
-- ​
+
 
 `reverse()`
 
-- 可以直接用views函数来进行重定向处理函数
+- 可以直接用`views`函数来进行重定向处理函数

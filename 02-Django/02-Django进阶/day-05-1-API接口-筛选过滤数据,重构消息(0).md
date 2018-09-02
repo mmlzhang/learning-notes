@@ -10,7 +10,7 @@ day05
 
 postman 直观查看接口返回内容
 
-模拟登陆    username password  csrf_token
+模拟登陆  username password  csrf_token
 
 
 
@@ -56,11 +56,11 @@ $(document).ready(function {
 
 {
 
-​	data : 数据
+	data : 数据
 
-​	code: 返回码
+	code: 返回码
 
-​	msg : 请求信息
+	msg : 请求信息
 
 }
 
@@ -70,7 +70,7 @@ $(document).ready(function {
 
 版本-1,下一篇会总结 
 
-- 重写JSONRender
+- 重写 JSONRender
 - render_context   请求的所有信息都在里面
 - utils -> functions.py    /  seeting.py注册    - serializer. update
 
@@ -115,7 +115,6 @@ def update(self, instance, validated_data):
     data = self.to_representation(instance)
 
     return {'code': 300, 'msg': 'aaaa', 'data': data}
-
             
 ```
 
@@ -127,7 +126,7 @@ def update(self, instance, validated_data):
 
 
 
-#### serializer.py -->  do_update# 
+#### serializer.py -->  do_update
 
 ![1527823551746](assets/do_update.png)
 

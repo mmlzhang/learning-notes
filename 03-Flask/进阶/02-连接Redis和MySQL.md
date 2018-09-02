@@ -30,7 +30,7 @@ ORM：
 
 #### 连接redis
 
-```
+```python
   
   from falsk_session import Session
   
@@ -54,7 +54,7 @@ ORM：
 
 注意: 创建模型是需要 从 falsk-sqlalchemy 中 导入 SQLAlchemy开进行模型的创建
 
-```
+```python
    # 配置数据库
       app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@localhost:3306/hello_flask'
       app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -64,11 +64,11 @@ ORM：
 
 例：访问mysql数据库，驱动为pymysql，用户为root，密码为123456，数据库的地址为本地，端口为3306，数据库名称HelloFlask
 
-设置如下： "mysql+pymysql://root:123456@localhost:3306/HelloFlask"
+设置如下： `mysql+pymysql://root:123456@localhost:3306/HelloFlask`
 
 在初始化init.py文件中如下配置：
 
-```
+```python
   app.config['SQLALCHEMY_TRAKE_MODIFICATIONS'] = False
   
   app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:123456@localhost:3306/HelloFlask"

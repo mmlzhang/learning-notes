@@ -10,7 +10,7 @@
 
 概念：
 
-```
+```python
 a）客户端会话技术，浏览器的会话技术
 
 b）数据全部存储在客户端中
@@ -26,7 +26,7 @@ c）存储使用的键值对结构进行存储
 
 创建：
 
-```
+```python
 Cookie是通过服务器创建的Response来创建的
 
 设置：set_cookie('key', value, max_ages='', expires='')
@@ -40,7 +40,7 @@ Cookie是通过服务器创建的Response来创建的
 
 获取：
 
-```
+```python
 在每次请求中，url都会向服务器传递Request，在request中可以获取到cookie的信息
 
 request.cookies.get('name')
@@ -48,7 +48,7 @@ request.cookies.get('name')
 
 例子1，设置cookie：
 
-```
+```python
 import datetime
 
 @blue.route('/setcookie/')
@@ -63,7 +63,7 @@ def set_cookie():
 
 例子2，删除cookie中的值
 
-```
+```python
 @blue.route('/setcookie/')
 def set_cookie():
     temp = render_template('index.html')
@@ -77,7 +77,7 @@ def set_cookie():
 
 例子3，获取cookie中的值
 
-```
+```python
 @blue.route('/getcookie/')  
 def get_cookie():
     name=request.cookies.get('name')  
@@ -92,7 +92,7 @@ flask-session是flask框架的session组件
 
 如：
 
-```
+```python
 redis：保存数据的一种工具，五大类型。非关系型数据库
 
 memcached
@@ -104,13 +104,13 @@ sqlalchmey：那数据存到数据库表里面
 
 #### 2.1 安装
 
-```
+```python
 pip install flask-session
 ```
 
 如果指定存session的类型为redis的话，需要安装redis
 
-```
+```python
 pip install redis
 ```
 
@@ -118,7 +118,7 @@ pip install redis
 
 设置session：
 
-```
+```python
 session['key'] = value
 ```
 
@@ -147,7 +147,7 @@ session.clear
 我们在初始化文件中创建一个方法，通过调用该方法来获取到Flask的app对象
 	
 
-```
+```python
 def create_app():
     app = Flask(__name__)
     # SECRET_KEY 秘钥
@@ -175,7 +175,7 @@ a）需要先启动redis，开启redis-server，使用redis-cli进入客户端
 
 b）定义方法
 
-```
+```python
 @blue.route('/login/', methods=['GET', 'POST'])
 def login():
     if request.method == 'GET':
@@ -184,14 +184,13 @@ def login():
     else:
         username = request.form.get('username')
         session['username'] = username
-
         return redirect(url_for('first.login'))
 ```
 
 c）定义模板
 	
 
-```
+```python
 <body>
 <h3>欢迎:{{ username }}</h3>
 <form action="" method="POST">

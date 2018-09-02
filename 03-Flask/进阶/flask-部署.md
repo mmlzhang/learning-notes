@@ -63,7 +63,7 @@ include /home/congfig/ajnginx.config
 
 
 
-```sgell
+```shell
 uwsgi --ini uwsgi.ini
 
 tail -f uwsgi.log
@@ -78,7 +78,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 
-```
+```shell
  [uwsgi]
   2 projectname = axf
   3 base = /home/src
