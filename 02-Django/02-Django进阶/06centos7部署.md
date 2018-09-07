@@ -1,13 +1,7 @@
 
 # 使用centos部署django项目
 
->Auth: 王海飞
->
->Data：2018-06-07
->
->Email：779598160@qq.com
->
->github：https://github.com/coco369/knowledge
+
 
 
 ### 安装MariaDB
@@ -90,31 +84,33 @@
 
 在centos中，系统默认只提供python2.7的版本，但是项目我们使用的python3.6的版本。所有我们自己安装python3
 
+```shell
+# 安装python3 全部命令
+yum -y groupinstall "Development tools" && yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel && wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz && tar -xvJf  Python-3.6.2.tar.xz && cd Python-3.6.2 && ./configure --prefix=/usr/local/python3 && make && make install && ln -s /usr/local/python3/bin/python3 /usr/bin/python3 && ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
+```
+
+
+
 
 #### 安装Python3的方法
 
 首先安装依赖包
 
-	yum -y groupinstall "Development tools"
-	
-	yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel
+	yum -y groupinstall "Development tools" && yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel 
 
 然后根据自己需求下载不同版本的Python3，我下载的是Python3.6.2
 
-	wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz
-	
-	然后解压压缩包，进入该目录，安装Python3
-	
-	tar -xvJf  Python-3.6.2.tar.xz
-	cd Python-3.6.2
-	./configure --prefix=/usr/local/python3
-	make && make install
+```shell
+
+
+然后解压压缩包，进入该目录，安装Python3
+
+tar -xvJf  Python-3.6.2.tar.xz && cd Python-3.6.2 && ./configure --prefix=/usr/local/python3 && make && make install
+```
 
 最后创建软链接
 
-	ln -s /usr/local/python3/bin/python3 /usr/bin/python3
-	
-	ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
+	ln -s /usr/local/python3/bin/python3 /usr/bin/python3 && ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
 
 
 ### 安装环境
@@ -331,7 +327,7 @@ logto = /home/logs/uwsgi.log
 ```
 
 
-​	
+	
 运行项目:
 
 ```shell
