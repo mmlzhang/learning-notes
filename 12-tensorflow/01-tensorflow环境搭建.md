@@ -30,3 +30,13 @@ message user{
 
 - 谷歌开源的自动化构建工具，谷歌内部绝大部分的应用都是通过它来编译的
 
+
+
+安装
+
+`pip install tensorflow`
+
+建议使用 anaconda
+
+`conda install tensorflow`
+
