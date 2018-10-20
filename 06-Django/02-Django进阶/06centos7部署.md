@@ -20,7 +20,9 @@
 
 ### 设置密码
 
-命令: mysql\_secure\_installation
+```python
+ mysql_secure_installation
+```
 
 	Enter current password for root:<–初次运行直接回车
 	
@@ -70,7 +72,7 @@
 	grant all privileges on test.* to 'root'@'%' identified by 'password' with grant option;
 	
 	# 刷新权限表
- 	flush privileges;
+ 	`flush privileges;`
 
 	# 查看
 	show grants for 'root'@'localhost';

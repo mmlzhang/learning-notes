@@ -19,7 +19,7 @@
 
 - 关系型数据库, 表与表之间存在某种关系
 
-  ​	
+  	
 
 - 关系型数据库都有自己的编程语言 
 
@@ -51,6 +51,12 @@
 #### 安装
 
 ##### 1.Linux安装mariadb, 启动进入mariadb
+
+```python
+yum install mariadb-server mariadb &&systemctl enable mariadb && systemctl start mariadb && mysql -u root -p
+```
+
+
 
 - `yum install mariadb-server mariadb` 安装mariadb
 - 启动服务 
