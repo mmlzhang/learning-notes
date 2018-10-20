@@ -86,7 +86,15 @@
 
 ```shell
 # 安装python3全部命令 root权限
-yum -y groupinstall "Development tools" && yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel && wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz && tar -xvJf  Python-3.6.2.tar.xz && cd Python-3.6.2 && ./configure --prefix=/usr/local/python3 && make && make install && ln -s /usr/local/python3/bin/python3 /usr/bin/python3 && ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
+yum -y groupinstall "Development tools" && yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel && wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz && tar -xvJf  Python-3.6.2.tar.xz && cd Python-3.6.2 && ./configure --prefix=/usr/local/python3 && make && make install && ln -s /usr/local/python3/bin/python3 /usr/bin/python3 && ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3 && yum install python-virtualenv
+```
+
+
+
+Nginx+uwsgi安装配置
+
+```python
+yum install epel-release && yum install nginx && systemctl start nginx && firewall-cmd --permanent --zone=public --add-service=http && firewall-cmd --permanent --zone=public --add-service=https && firewall-cmd --reload &&systemctl enable nginx && pip3 install uwsgi && ln -s /usr/local/python3/bin/uwsgi /usr/bin/uwsgi
 ```
 
 
@@ -203,16 +211,12 @@ nginx的运行命令：
 d）系统启动时启用Nginx
 	
 ```shell
-systemctl enable nginx
+yum install epel-release && yum install nginx && systemctl start nginx && sudo firewall-cmd --permanent --zone=public --add-service=http && sudo firewall-cmd --permanent --zone=public --add-service=https && sudo firewall-cmd --reload &&systemctl enable nginx && pip3 install uwsgi && ln -s /usr/local/python3/bin/uwsgi /usr/bin/uwsgi
 ```
 
 e）如果您正在运行防火墙，请运行以下命令以允许HTTP和HTTPS通信：
 ```shell
-sudo firewall-cmd --permanent --zone=public --add-service=http 
-
-sudo firewall-cmd --permanent --zone=public --add-service=https
-
-sudo firewall-cmd --reload
+sudo firewall-cmd --permanent --zone=public --add-service=http && sudo firewall-cmd --permanent --zone=public --add-service=https && sudo firewall-cmd --reload &&
 ```
 
 运行结果如下:
@@ -224,7 +228,7 @@ sudo firewall-cmd --reload
 
 ##### 3.1 安装uwsgi
 
-	pip3 install uwsgi
+	pip3 install uwsgi 
 
 然后进行环境变量的配置， 建立软连接
 
