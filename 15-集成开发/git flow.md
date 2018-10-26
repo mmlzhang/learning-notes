@@ -4,7 +4,8 @@ git flow是一个git的扩展集。Git flow 可以工作在 OSX, Linux 和 Windo
 本文主要列举一些常用的git flow命令。以及git flow从无到有的步骤；
 
 1. 安装。
-2. 初始化。git flow init       最后就一路回车选择默认的就ok了，，接下来就是使用了
+2. 初始化。
+   - `git flow init`       最后就一路回车选择默认的就ok了，，接下来就是使用了
 
 **常用命令以及分支**：
 
