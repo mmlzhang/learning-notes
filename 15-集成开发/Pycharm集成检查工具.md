@@ -18,6 +18,7 @@ flake8
 ```python
 
 Program: $PyInterpreterDirectory$/python
+  C:\Users\zhang\AppData\Local\Programs\Python\Python36\Scripts\flake8.exe
 Arguments: -m flake8 --show-source --statistics $ProjectFileDir$
 Working directory: $ProjectFileDir$
 
