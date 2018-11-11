@@ -72,7 +72,8 @@
 	grant all privileges on test.* to 'root'@'%' identified by 'password' with grant option;
 	
 	# 刷新权限表
- 	`flush privileges;`
+	flush privileges;
+ 	``
 
 	# 查看
 	show grants for 'root'@'localhost';
@@ -182,7 +183,7 @@ Django框架仅在开发模式下提供静态文件服务。当我开启DEBUG模
 ##### 2.1 安装nginx
 
 a）添加nginx存储库
-	
+​	
 ```shell
 yum install epel-release
 ```
@@ -197,7 +198,7 @@ yum install nginx
 c) 运行nginx
 
 Nginx不会自行启动。要运行Nginx
-	
+​	
 ```shell
 systemctl start nginx
 ```
@@ -211,7 +212,7 @@ nginx的运行命令：
 
 
 d）系统启动时启用Nginx
-	
+​	
 ```shell
 yum install epel-release && yum install nginx && systemctl start nginx && sudo firewall-cmd --permanent --zone=public --add-service=http && sudo firewall-cmd --permanent --zone=public --add-service=https && sudo firewall-cmd --reload &&systemctl enable nginx && pip3 install uwsgi && ln -s /usr/local/python3/bin/uwsgi /usr/bin/uwsgi
 ```
@@ -333,7 +334,7 @@ logto = /home/logs/uwsgi.log
 ```
 
 
-	
+​	
 运行项目:
 
 ```shell

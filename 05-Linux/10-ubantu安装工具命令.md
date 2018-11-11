@@ -110,3 +110,6 @@ vi ~/.bashrc
 alias navicat="/home/lanms/Desktop/software/navicat121_premium_cs_x64/start_navicat"
 ```
 
+解决乱码
+
+https://blog.csdn.net/sinat_26546385/article/details/80381282
