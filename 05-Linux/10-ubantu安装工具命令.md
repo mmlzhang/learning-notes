@@ -1,10 +1,16 @@
+将vim设置为默认文本编辑器
+
+```shell
+echo export EDITOR=/usr/bin/vim >> ~/.bashrc 
+```
+
+
+
 修改Host文件
 
 ```shell
 sudo gedit /etc/hosts
 ```
-
-
 
 
 
@@ -112,5 +118,7 @@ alias navicat="/home/lanms/Desktop/software/navicat121_premium_cs_x64/start_navi
 ```
 
 解决乱码
+
+选项里左边选择第一个，在右边第一个下拉框中选择Noto Sans mono CJK SC Regular
 
 https://blog.csdn.net/sinat_26546385/article/details/80381282

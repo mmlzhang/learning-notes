@@ -29,7 +29,5 @@ pip install eventlet
 celery -A <mymodule> worker -l info -P eventlet
 ```
 
-
-
-scrapyd 命令
+http://www.cnblogs.com/cwp-bg/p/8759638.html
 
