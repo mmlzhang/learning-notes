@@ -1,0 +1,11 @@
+--2018-11-11 15:48:31--  https://repo.fdzh.org/chrome/google-chrome.list
+正在解析主机 repo.fdzh.org (repo.fdzh.org)... 128.1.135.209
+正在连接 repo.fdzh.org (repo.fdzh.org)|128.1.135.209|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 131 [application/octet-stream]
+正在保存至: “/etc/apt/sources.list.d/google-chrome.list.1”
+
+google-chrome.list.1           0%[                                              ]       0  --.-KB/s               google-chrome.list.1         100%[=============================================>]     131  --.-KB/s    用时 0s    
+
+2018-11-11 15:48:37 (51.2 MB/s) - 已保存 “/etc/apt/sources.list.d/google-chrome.list.1” [131/131])
+
