@@ -22,7 +22,7 @@ http://127.0.0.1:5555/user/celery/?v1=aaaa&v2=bbb
 
 可使用 AWS 的 SQS 和 DynmoDB
 
-
+windows
 
 ```
 
