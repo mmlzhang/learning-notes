@@ -4,8 +4,6 @@ celery的使用
 
 https://blog.csdn.net/Shyllin/article/details/80940643
 
-
-
 https://www.cnblogs.com/forward-wang/p/5970806.html
 
 
