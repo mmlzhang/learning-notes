@@ -295,7 +295,7 @@ src是项目文件，该目录下上传的是目录代码
 
 如果自定义的axfnginx.conf文件没有错误的话，查看nginx的运行状态会有如下的结果：
 
-![图](django/images/django_centos_nginx_status.png)
+![图](django/02-Django进阶/assets/django_centos_nginx_status.png)
 
 
 #### 4.2 配置uwsgi文件
