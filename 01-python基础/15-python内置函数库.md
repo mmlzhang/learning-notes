@@ -83,3 +83,8 @@ list(chain("ABC", '123'))
                         groupby(os_version_list, key=lambda x: x.os)}
 ```
 
+
+
+## filter
+
+过滤，满足条件的返回True此时改值会被返回出来，不满足条件的值被忽略
