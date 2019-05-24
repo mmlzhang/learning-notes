@@ -12,12 +12,10 @@
 
 ## Topic exchange
 
-Topic exchange是最灵活的exchange，它会把exchange的routing key与绑定队列的routing key进行模式匹配。Routing key中可以包含 *和#两种符号，#号可以用来匹配一个或者多个单词，*用来匹配正好一个单词。官方的下图很好地说明了这个问题，读者最好自己动手验证一下。
-
-
+Topic exchange是最灵活的exchange，它会把exchange的routing key与绑定队列的routing key进行模式匹配。Routing key中可以包含 `*`和`#`两种符号，#号可以用来匹配一个或者多个单词，`*`用来匹配正好一个单词。官方的下图很好地说明了这个问题，读者最好自己动手验证一下。
 
 ```python
- 
+
 import os
 import sys
 import pika
