@@ -14,3 +14,5 @@ join SQL
 select t.ad_plan_id, t.task_id  from task_ad_plan t left join ad_plan a on a.id=t.ad_plan_id where a.status='active'; 
 ```
 
+
+
