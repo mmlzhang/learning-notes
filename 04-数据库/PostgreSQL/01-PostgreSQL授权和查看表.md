@@ -2,6 +2,19 @@ PostgreSQL常用命令
 
 `$psql -U user_name -d database_name -h severhost`
 
+
+
+#### 登录
+
+```shell
+# 方法一
+sudo -u postgres -i
+# 方法二
+psql -U lanms   # 需要提前创建用户lanms和数据库lanms
+```
+
+
+
 #### 授权
 
 ```sql
