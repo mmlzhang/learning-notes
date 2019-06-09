@@ -31,6 +31,14 @@ def _make_dir_list(dir_path, result=[]):
 
 
 def make_file_list(path):
+    """
+
+    Args:
+        path: str
+
+    Returns: dict {title: file_list[List]}
+
+    """
     res = {}
     for file in sorted(os.listdir(path)):
         sub_path = os.path.join(path, file)
@@ -54,7 +62,7 @@ def get_contents(file_dict):
         content += f"### {title}\n"
         for file in file_list:
             file_name = os.path.split(file)[-1]
-            file_path = re.sub("/home/lanms/Desktop/github/learning-notes", '.', file)
+            file_path = re.sub(path, '.', file)
             content += f"- [{file_name}]({file_path})\n"
         contents += content
     return contents
