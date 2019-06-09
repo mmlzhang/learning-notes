@@ -30,7 +30,7 @@ def _make_dir_list(dir_path, result=[]):
     return result
 
 
-def make_file_list(path):
+def make_file_dict(path):
     """
 
     Args:
@@ -69,7 +69,7 @@ def get_contents(file_dict):
 
 
 def main():
-    file_dict = make_file_list(path)
+    file_dict = make_file_dict(path)
     file_contents = get_contents(file_dict)
     readme = os.path.join(path, "README.md")
     with open(readme, "a", encoding="utf-8") as f:
