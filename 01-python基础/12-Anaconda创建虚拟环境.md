@@ -1,3 +1,12 @@
+### 下载安装 
+
+下载地址：
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/
+下载最新的windows版本
+
+安装过程如果没有选择添加环境变量，那么需要手动添加一下环境变量
+
+
 ### 常用命令
 
 conda -V (大写) 查看版本
