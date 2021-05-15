@@ -1,4 +1,5 @@
 ### 下载安装 
+https://www.jianshu.com/p/920a6e18cfd6 (参考文档)
 
 下载地址：
 https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/
